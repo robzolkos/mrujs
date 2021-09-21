@@ -8,8 +8,8 @@ end
 namespace :ci do
   task :test do
     Dir.chdir("test/rails/dummy") do
-      system("bundle exec rails db:prepare")
-      system("bundle exec rails test:all")
+      sh("bundle exec rails db:prepare")
+      sh("bundle exec rails test:all")
     end
   end
 end
